@@ -1,0 +1,2 @@
+module AisatsuHelper
+end

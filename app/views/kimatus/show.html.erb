@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gakusei:</strong>
+  <%= @kimatu.gakusei_id %>
+</p>
+
+<p>
+  <strong>Kbn:</strong>
+  <%= @kimatu.kbn %>
+</p>
+
+<p>
+  <strong>Kokugo:</strong>
+  <%= @kimatu.kokugo %>
+</p>
+
+<p>
+  <strong>Sugaku:</strong>
+  <%= @kimatu.sugaku %>
+</p>
+
+<p>
+  <strong>Eigo:</strong>
+  <%= @kimatu.eigo %>
+</p>
+
+<%= link_to 'Edit', edit_kimatu_path(@kimatu) %> |
+<%= link_to 'Back', kimatus_path %>

@@ -1,0 +1,17 @@
+<h1 class="display-4 text-primary">People#add</h1>
+<p><%= @msg %></p>
+<%= form_with(model: @person, url: {controller: "people",action: "update"}) do |f| %>
+    <div class="form-group">
+        <%= f.label(:name,"名前") %>
+        <%= f.text_field(:name,class: "form-control") %>
+    </div>
+    <div class="form-group">
+        <%= f.label(:age,"年齢") %>
+        <%= f.text_field(:age,class: "form-control") %>
+    </div>
+    <div class="form-group">
+        <%= f.label(:mail,"メール") %>
+        <%= f.text_field(:mail,class: "form-control") %>
+    </div>
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,42 @@
+<%= form_with(model: kimatu, local: true) do |form| %>
+  <% if kimatu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kimatu.errors.count, "error") %> prohibited this kimatu from being saved:</h2>
+
+      <ul>
+        <% kimatu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gakusei_id %>
+    <%= form.number_field :gakusei_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kbn %>
+    <%= form.number_field :kbn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kokugo %>
+    <%= form.number_field :kokugo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sugaku %>
+    <%= form.number_field :sugaku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eigo %>
+    <%= form.number_field :eigo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

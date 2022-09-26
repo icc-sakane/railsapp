@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gakusei_id: 1
+  kbn: 1
+  kokugo: 1
+  sugaku: 1
+  eigo: 1
+
+two:
+  gakusei_id: 1
+  kbn: 1
+  kokugo: 1
+  sugaku: 1
+  eigo: 1

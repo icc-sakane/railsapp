@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gakuseis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gakusei no</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gakuseis.each do |gakusei| %>
+      <tr>
+        <td><%= gakusei.name %></td>
+        <td><%= gakusei.age %></td>
+        <td><%= gakusei.gakusei_no %></td>
+        <td><%= link_to 'Show', gakusei %></td>
+        <td><%= link_to 'Edit', edit_gakusei_path(gakusei) %></td>
+        <td><%= link_to 'Destroy', gakusei, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gakusei', new_gakusei_path %>

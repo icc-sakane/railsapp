@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gakusei.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @gakusei.age %>
+</p>
+
+<p>
+  <strong>Gakusei no:</strong>
+  <%= @gakusei.gakusei_no %>
+</p>
+
+<%= link_to 'Edit', edit_gakusei_path(@gakusei) %> |
+<%= link_to 'Back', gakuseis_path %>

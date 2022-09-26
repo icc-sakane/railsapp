@@ -1,0 +1,27 @@
+<h1>Cards#edit</h1>
+<p>※「<%= @card.title %>」の内容を編集します</p>
+<%= form_with(model:@card, url:{controller: "cards",action: "edit"}) do |f| %>
+    <div>
+        <%= f.label(:title,"タイトル") %>
+        <%= f.text_field(:title) %>
+    </div>
+    <div>
+        <%= f.label(:author,"著者") %>
+        <%= f.text_field(:author) %>
+    </div>
+    <div>
+        <%= f.label(:price,"価格") %>
+        <%= f.text_field(:price) %>
+    </div>
+    <div>
+        <%= f.label(:publisher,"出版社") %>
+        <%= f.text_field(:publisher) %>
+    </div>
+    <div>
+        <%= f.label(:memo,"コメント") %>
+        <%= f.text_area(:memo) %>
+    </div>
+    <div>
+        <%= f.submit("保存") %>
+    </div>
+<% end %>

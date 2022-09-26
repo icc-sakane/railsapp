@@ -1,0 +1,35 @@
+<h1 class="display-4 text-primary">
+    People#find
+</h1>
+<p><%= @msg %></p>
+<%= form_with(url: {controller: "people" , action: "find"})  do |f| %>
+
+
+    <div class="form-group">
+        <%= f.label(:name,"名前") %>
+        <%= f.text_field(:name, class:"form-control") %>
+    </div>
+    <div class="form-group">
+        <%= f.label(:age1,"年齢") %>
+        <%= f.text_field(:age1, class:"form-control") %>
+        <%= f.text_field(:age2, class:"form-control") %>
+    </div>
+
+
+    <%= f.submit(:click) %>
+<% end %>
+<table class="table">
+    <tr>
+        <th>Id</th><th>Name</th><th>Age</th><th>Mail</th>
+    </tr>
+    <% @people.each do |obj| %>
+        <tr>
+            <td><%= obj.id %></td>
+            <td><%= obj.name %></td>
+            <td><%= obj.age %></td>
+            <td><%= obj.mail %></td>
+        </tr>
+    <% end %>
+</table>
+
+

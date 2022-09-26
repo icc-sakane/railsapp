@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kimatus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gakusei</th>
+      <th>Kbn</th>
+      <th>Kokugo</th>
+      <th>Sugaku</th>
+      <th>Eigo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kimatus.each do |kimatu| %>
+      <tr>
+        <td><%= kimatu.gakusei_id %></td>
+        <td><%= kimatu.kbn %></td>
+        <td><%= kimatu.kokugo %></td>
+        <td><%= kimatu.sugaku %></td>
+        <td><%= kimatu.eigo %></td>
+        <td><%= link_to 'Show', kimatu %></td>
+        <td><%= link_to 'Edit', edit_kimatu_path(kimatu) %></td>
+        <td><%= link_to 'Destroy', kimatu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kimatu', new_kimatu_path %>

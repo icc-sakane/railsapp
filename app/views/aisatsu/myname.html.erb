@@ -1,0 +1,13 @@
+<h1>あいさつ</h1>
+<p><%= @msg %>
+<%= form_with url: "/aisatsu/myname",local: true do |f| %>
+    <%= f.label :name ,"名前" %>
+    <%=  f.text_field(:name) %><br />
+    <%= f.label :jikan,"時間" %>
+    <%= f.text_field(:jikan) %><br />
+    <%= f.radio_button :lang,"jpn" %>日本語  
+    <%= f.radio_button :lang,"eng" %>英語<br />
+    <%= f.label :chk_name,"名前なし" %>
+    <%= f.check_box :chk_name,{},"true","false" %><br />
+    <%= f.submit :send,value: "送信" %>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>学生一覧</h1>
+<table>
+    <tr>
+        <th>名前</th>
+    </tr>
+    <% @students.each do |s| %>
+        <tr>
+            <td>
+                <a href="/students/show/<%= s.id %>"> <%= s.name %></a>
+            </td>
+            <td>
+                <a href="/students/edit/<%= s.id %>">Edit</a>
+            </td>
+        </tr>
+    <% end %>
+</table>
+<a href="/students/add">新規作成</a>

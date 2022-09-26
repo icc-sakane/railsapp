@@ -1,0 +1,20 @@
+<!--
+    <h1 class="display-4"><%= @title %></h1>
+    <p><%= @msg %></p>
+    <%= form_with(url: "/hello/index",local: true) do |f| %>
+        <%= f.text_field(:input1,size: 5) %><br />
+        <%= f.check_box(:check,{},"checked!!","not checked!") %>
+        <%= f.label(:check,"チェックボックス") %><br />
+        <%= f.radio_button :gender,"man" %>男<br />
+        <%= f.radio_button :gender,"woman" %>女<br />
+
+        <%= f.select :class,[["システムエンジニア","SE"],
+                        ["ITビジネス","IT"],
+                        ["医療ビジネス","IR"],
+                        ["こども福祉","KO"],
+                    ] %>
+
+        <%= f.submit(:click) %>
+    <% end %>
+-->
+<p><%= @msg %></p>
